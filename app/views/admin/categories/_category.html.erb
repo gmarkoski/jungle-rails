@@ -1,0 +1,12 @@
+<tr>
+  <td>
+    <h4><%= category.name %></h4>
+  </td>
+  <td>
+    <%= category.id %>
+  </td>
+
+  <td>
+    <%= Category.find(category.id).products.count %>
+  </td>
+</tr>  
