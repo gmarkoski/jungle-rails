@@ -1,14 +1,18 @@
-class Admin::CategoriesController < ApplicationController
+class CategoriesController < ApplicationController
 
-  http_basic_authenticate_with name: ENV['HTTP_username'], password: ENV['HTTP_password']
+  http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD']
 
   def index
     @categories = Category.order(id: :desc).all
-
   end
 
   def new
     @category = Category.new
+  end
+
+  def show
+    @category = Category.find(params[:id])
+    @products = @category.products.order(created_at: :desc)
   end
 
   def create
