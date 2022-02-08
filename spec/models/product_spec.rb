@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe Product, type: :model do
 
   describe 'Validations' do
+    
     it 'should save successfully' do
       @product = Product.new
       @product.name = 'Thing'
