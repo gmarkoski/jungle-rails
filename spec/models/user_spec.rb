@@ -67,7 +67,6 @@ RSpec.describe User, type: :model do
       expect(User.authenticate_with_credentials("test@test.com", "example")).to eql(nil)
     end
 
-    
     it 'should authenticate a user even with incorrect case' do
       @user = User.new(first_name: "Bob", last_name: "Dole", email: "test@test.com", password: "password", password_confirmation: "password")
       @user.save()
