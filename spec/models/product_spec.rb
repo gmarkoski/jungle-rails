@@ -28,7 +28,7 @@ RSpec.describe Product, type: :model do
     end
 
     it "should not validate cause there's no category" do
-      @product = Product.new(name: "goodName", price: 25, quantity: 6, category: nil)
+      @product = Product.new(name: "Thing", price: 25, quantity: 6, category: nil)
       @product.errors.full_messages
     end
 
