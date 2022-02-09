@@ -16,12 +16,15 @@ RSpec.feature "Visitor navigates to the product page", type: :feature, js: true 
     end
   end
 
-  scenario "They can see product details by clicking on a product detail link" do
-    # ACT
+  scenario "Users can add a product to the cart" do 
+    #ACT
     visit root_path
-    first("article.product").find_link('Details').click
-    expect(page).to have_content "Quantity"
-    # sleep 3 
+
+    first('article button.btn-primary').click
+
+    #DEBUG / VERIFY
     save_screenshot
+
+    expect(page).to have_selector('a', text: 'My Cart (1)')
   end
 end
