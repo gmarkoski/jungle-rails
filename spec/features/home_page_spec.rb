@@ -19,9 +19,12 @@ RSpec.feature "Visitor navigates to the product page", type: :feature, js: true 
   scenario "They can see product details by clicking on a product detail link" do
     # ACT
     visit root_path
+    
     first("article.product").find_link('Details').click
+    
+    # DEBUG/VERIFY
     expect(page).to have_content "Quantity"
-    # sleep 3 
+  
     # save_screenshot
   end
 end
