@@ -2,6 +2,14 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of learing Rails by example for my BootCamp with LHL
 
+## Final Product
+
+![Jungle Products Page](https://github.com/gmarkoski/jungle-rails/blob/master/docs/Jungle%20products.png?raw=true)
+
+![Jungle Cart](https://github.com/gmarkoski/jungle-rails/blob/master/docs/Jungle%20cart.png?raw=true)
+
+![Jungle Admin](https://github.com/gmarkoski/jungle-rails/blob/master/docs/Jungle%20admin.png?raw=true)
+
 
 ## Setup
 
