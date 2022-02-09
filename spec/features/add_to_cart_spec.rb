@@ -23,8 +23,9 @@ RSpec.feature "Visitor navigates to the product page", type: :feature, js: true 
     first('article button.btn-primary').click
 
     #DEBUG / VERIFY
+    expect(page).to have_selector('a', text: 'My Cart (1)')
+    
     save_screenshot
 
-    expect(page).to have_selector('a', text: 'My Cart (1)')
   end
 end

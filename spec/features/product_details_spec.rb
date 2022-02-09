@@ -22,6 +22,6 @@ RSpec.feature "Visitor navigates to the product page", type: :feature, js: true 
     first("article.product").find_link('Details').click
     expect(page).to have_content "Quantity"
     # sleep 3 
-    save_screenshot
+    #save_screenshot
   end
 end
